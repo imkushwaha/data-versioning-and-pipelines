@@ -1,0 +1,5 @@
+data:
+  csv_file_path: ./archive/imdb-dataset.csv
+  test_set_ratio: 0.3
+  train_csv_save_path: ./archive/train.csv
+  test_csv_save_path: ./archive/test.csv
