@@ -1,5 +1,15 @@
 # DVC Pipelines
 
+- Initialize an empty git repository
+  
+```bash
+git init
+```
+- also initialize dvc
+  
+```bash
+dvc init
+```
 ### ML projects consist of multiple stages
 
 - Data collection
@@ -49,4 +59,26 @@ touch params.yaml
 - https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
 
 
+### Create a dvc.yaml file
+- In this file we are going to specify all the dependencies
 
+```bash
+touch dvc.yaml
+```
+
+- Check the dvc.yaml file used for this sample mml project
+
+### Create DAG from dvc.yaml file
+
+- To create DAG of all the satges defined in dvc.yam file, run
+
+```bash
+dvc dag
+```
+
+### To run our pipelines
+
+```bash
+dvc repro
+```
+- When we run this, DVC will go and run everything we specified in our "dvc.yaml" file
