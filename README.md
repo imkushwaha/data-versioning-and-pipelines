@@ -43,3 +43,10 @@ touch params.yaml
 - However, in that case, while we are running DVC pipelines, we need to specify the file name.
 
 - This yaml configuration file will hold everything we need to run our pipeline.
+
+### Downlaod data from here
+
+- https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
+
+
+
