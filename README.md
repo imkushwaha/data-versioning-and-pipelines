@@ -14,7 +14,7 @@ git init
 dvc init
 ```
 
-### I will version the images present in images folder
+### We will version the images present in images folder
 
 ```bash
 dvc add ./images
@@ -160,3 +160,35 @@ git pull
 - Actually we can use just YAML file ans we will have a version key and we will specify the version which we need.
 - And everything will be done for us automatically.
 - We won't need to worry about this checkout and going back to some previous commit and so on.
+
+
+### How to access our data?
+
+- How we can access our data which is tracked by DVC?
+  
+- In order to see what data available in a DVC repository, We can use:
+```bash
+dvc list <github-repo-url>
+```
+- To see data present in data directory, in this case images present in images directory
+```bash
+dvc list <github-repo-url> <directory-path>
+```
+
+- In order to download this data that is stored in a DVC repository
+
+```bash
+dvc get <github-repo-url> <directory-path>
+```
+- Another way to get or download data is to use "dvc impport",
+- In order to use "dvc import" command, we need to be in a DVC repository,
+- It doesn't need to be the same repository we use to track our data, 
+- It can be another repository. However, it has to be some DVC repository.
+- Can create one using command "dvc init".
+
+```bash
+dvc import <github-repo-url> <directory-path>
+```
+
+- "dvc import" downloads the data including the metadata to track changes in the source repository.
+- This allows us to bring in changes from the data source later on using "dvc update"
